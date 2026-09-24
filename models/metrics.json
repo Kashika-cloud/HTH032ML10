@@ -1,0 +1,81 @@
+{
+  "building_id": 1301,
+  "test_period": {
+    "start": "2016-12-04 00:00:00",
+    "end": "2016-12-31 23:00:00",
+    "hours": 672,
+    "days": 28
+  },
+  "models": {
+    "seasonal_naive_168": {
+      "mae": 8.795,
+      "rmse": 12.347,
+      "cv_rmse": 10.35,
+      "mape": 7.44,
+      "daily_max_error": 10.9509,
+      "peak_hour_recall": 28.57
+    },
+    "naive_yesterday_24": {
+      "mae": 8.4563,
+      "rmse": 11.6858,
+      "cv_rmse": 9.8,
+      "mape": 7.05,
+      "daily_max_error": 8.0938,
+      "peak_hour_recall": 17.86
+    },
+    "lightgbm_l2": {
+      "mae": 6.3436,
+      "rmse": 8.208,
+      "cv_rmse": 6.88,
+      "mape": 5.27,
+      "daily_max_error": 10.912,
+      "peak_hour_recall": 42.86
+    },
+    "lightgbm_q50": {
+      "mae": 6.6239,
+      "rmse": 8.5341,
+      "cv_rmse": 7.16,
+      "mape": 5.46,
+      "daily_max_error": 11.8171,
+      "peak_hour_recall": 35.71
+    },
+    "lightgbm_q10": {
+      "mae": 10.9528,
+      "rmse": 13.4541,
+      "cv_rmse": 11.28,
+      "mape": 8.76,
+      "daily_max_error": 21.5301,
+      "peak_hour_recall": 32.14
+    },
+    "lightgbm_q90": {
+      "mae": 9.1864,
+      "rmse": 11.238,
+      "cv_rmse": 9.42,
+      "mape": 7.99,
+      "daily_max_error": 8.0531,
+      "peak_hour_recall": 21.43
+    }
+  },
+  "p90_diagnostics": {
+    "target_coverage_pct": 90.0,
+    "actual_coverage_pct": 82.44,
+    "peak_cap_kw": 147.55,
+    "daily_breaches": {
+      "true_breaches": 5,
+      "predicted_breaches": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "tn": 23,
+      "precision_pct": 0.0,
+      "recall_pct": 0.0,
+      "f1_pct": 0.0
+    },
+    "hourly_breaches": {
+      "true_breaches": 9,
+      "predicted_breaches": 0,
+      "precision_pct": 0.0,
+      "recall_pct": 0.0
+    }
+  }
+}

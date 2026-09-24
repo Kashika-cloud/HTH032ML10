@@ -1,0 +1,14 @@
+train.csv
+.venv/
+.venv-1/
+venv/
+env/
+__pycache__/
+node_modules/
+*.dll
+*.pkl
+*.joblib
+*.csv
+*.parquet
+*.log
+.env
