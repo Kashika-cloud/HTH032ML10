@@ -103,7 +103,7 @@ st.markdown(
     .main-title {
         font-size: 2.2rem;
         font-weight: 700;
-        color: #1E293B;
+        color: #ffff;
         margin-bottom: 0.2rem;
     }
     .sub-title {
