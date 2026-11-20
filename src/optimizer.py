@@ -138,7 +138,14 @@ def optimize_schedule(
     # =========================================================================
     # STAGE 1: Peak Minimization (Feasibility Discovery)
     # =========================================================================
-    
+    solver1 = pywraplp.Solver.CreateSolver("GLOP")
+    if not solver1:
+        raise RuntimeError("OR-Tools GLOP solver could not be initialized.")
+
+    x1: Dict[Tuple[int, int], pywraplp.Variable] = {}
+    for h in range(H):
+        for t in get_allowed_targets(h):
+            x1[(h, t)] = solver1.NumVar(0.0, solver1.infinity(), f"x1_{h}_{t}")
 
     # Peak variable P
     P = solver1.NumVar(0.0, solver1.infinity(), "Peak_P")
